@@ -1,0 +1,2 @@
+out/bin/* /usr/bin/
+out/lib/* /usr/lib/ec2/apitools/

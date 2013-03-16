@@ -1,0 +1,5 @@
+ec2-api-tools (1.6.7.1-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Travis Cross <tc@traviscross.com>  Sat, 16 Mar 2013 19:17:42 +0000

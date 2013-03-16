@@ -1,0 +1,8 @@
+ec2-api-tools for Debian
+------------------------
+
+To update to a new upstream version, run:
+
+ make -f debian/rules update
+
+ -- Travis Cross <tc@traviscross.com>, Sat, 16 Mar 2013 22:06:33 +0000
