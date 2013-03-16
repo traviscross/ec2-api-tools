@@ -1,0 +1,49 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+#export DH_VERBOSE=1
+
+binary: binary-indep
+binary-arch:
+binary-indep: build
+	dh_testdir -i
+	dh_testroot -i
+	dh_installdirs -i
+	dh_install -i
+	dh_installdocs -i
+	dh_installchangelogs -i
+	dh_lintian -i
+	dh_compress -i
+	dh_fixperms -i
+	dh_installdeb -i
+	dh_gencontrol -i
+	dh_md5sums -i
+	dh_builddeb -i
+
+build: build-indep
+build-arch:
+build-indep:
+	mkdir -p out
+	cp -a bin lib out/
+	for x in out/bin/*; do \
+	  sed -i \
+	    -e "s|^\(__.*__EC2_HOME=.*\)|#\1|" \
+	    -e 's|^\("$${EC2_HOME}"\)|/usr|' \
+	    $$x; done
+	sed -i \
+	  -e "s|^\(LIBDIR=\).*|\1/usr/lib/ec2/apitools|" \
+	  -e "s|^\(JAVA_HOME=\).*|\1/usr|" \
+	  out/bin/ec2-cmd
+	touch build-indep
+
+clean:
+	rm -rf out build-indep
+	dh_testdir
+	dh_clean
+
+update:
+	wget -N "http://s3.amazonaws.com/ec2-downloads/ec2-api-tools.zip"
+	rm -rf bin etc lib *.txt
+	unzip ec2-api-tools.zip && rm ec2-api-tools.zip
+	ls | grep ec2-api-tools | head -n1 | sed -e "s/ec2-api-tools-//" > version.txt
+	cp -a ec2-api-tools-$$(cat version.txt)/* . && rm -rf ec2-api-tools-$$(cat version.txt)
+	rm -f bin/*.cmd

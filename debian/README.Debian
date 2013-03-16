@@ -1,0 +1,8 @@
+ec2-api-tools for Debian
+------------------------
+
+Note that the license, while allowing for distribution, prohibits
+using the tools for any purpose other than with AWS, thus making this
+software non-free.
+
+ -- Travis Cross <tc@traviscross.com>, Sat, 16 Mar 2013 22:06:27 +0000

@@ -1,0 +1,10 @@
+## lintian overrides
+
+# We're not in Debian yet...
+ec2-api-tools: new-package-should-close-itp-bug
+
+# There is no upstream changelog
+ec2-api-tools: no-upstream-changelog
+
+# We know there are no man pages
+ec2-api-tools: binary-without-manpage *

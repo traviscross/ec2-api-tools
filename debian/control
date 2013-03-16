@@ -1,0 +1,14 @@
+Source: ec2-api-tools
+Section: admin
+Priority: extra
+Maintainer: Travis Cross <tc@traviscross.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.3
+Homepage: http://aws.amazon.com/developertools
+
+Package: ec2-api-tools
+Architecture: all
+Depends: ${misc:Depends}, openjdk-6-jre
+Description: EC2 API Tools
+ These tools are provided by Amazon for interfacing with their EC2
+ API.
