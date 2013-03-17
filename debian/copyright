@@ -5,7 +5,7 @@ Source: http://s3.amazonaws.com/ec2-downloads/ec2-api-tools.zip
 Files: *
 Copyright: 2013 Amazon.com, Inc.
 License: Amazon Software License
-Amazon Software License
+ Amazon Software License
  .
  This Amazon Software License (“License”) governs your use,
  reproduction, and distribution of the accompanying software as
@@ -229,9 +229,9 @@ License: BSD
   Brett McLaughlin <brett_AT_jdom_DOT_org>.  For more information
   on the JDOM Project, please see <http://www.jdom.org/>.
  
- Files: lib/bcprov.jar
- Copyright: 2018 The Legion of The Bouncy Castle
- License: BSD
+Files: lib/bcprov.jar
+Copyright: 2018 The Legion of The Bouncy Castle
+License: BSD
  Use of any of this software is governed by the terms of the license below:
  .
  Copyright (c) 2000 - 2008 The Legion Of The Bouncy Castle
