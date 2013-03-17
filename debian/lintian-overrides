@@ -8,3 +8,6 @@ ec2-api-tools: no-upstream-changelog
 
 # We know there are no man pages
 ec2-api-tools: binary-without-manpage *
+
+# We want to use /var/lib for internal consistency
+ec2-api-tools: jar-not-in-usr-share *
